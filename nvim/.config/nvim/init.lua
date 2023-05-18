@@ -1,0 +1,6 @@
+require('myshit.set')
+require('myshit.plugins')
+require('myshit.keys')
+require('myshit.colors')
+require('myshit.lsp')
+require('myshit.lsp.completion')

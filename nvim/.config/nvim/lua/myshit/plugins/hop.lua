@@ -1,0 +1,7 @@
+require('hop').setup()
+vim.api.nvim_set_keymap("n", "<Leader><Leader>w", "<cmd>HopWord<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader><Leader>l", "<cmd>HopLine<CR>", { noremap = true })
+vim.api.nvim_set_keymap("v", "<Leader><Leader>w", "<cmd>HopWord<CR>", { noremap = true })
+vim.api.nvim_set_keymap("v", "<Leader><Leader>l", "<cmd>HopLine<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "F", "<cmd>HopChar1<CR>", { noremap = false })
+vim.api.nvim_set_keymap("v", "F", "<cmd>HopChar1<CR>", { noremap = false })
