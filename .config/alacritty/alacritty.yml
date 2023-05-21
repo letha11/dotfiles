@@ -133,11 +133,13 @@ font:
     #   - (Windows) Consolas
     # family: SauceCodePro Nerd Font
     # family: CodeNewRoman Nerd Font
-    family: RobotoMono Nerd Font Mono
+    # family: RobotoMono Nerd Font Mono
+    # family: Roboto Mono
     # family: Hack Nerd Font
     # family: JetBrains Mono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
+    family: Hurmit Nerd Font
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
