@@ -8,7 +8,7 @@ vim.opt.relativenumber = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
-vim.opt.expandtab = true
+-- vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- vim.opt.list = false
@@ -16,7 +16,6 @@ vim.opt.smartindent = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 -- vim.opt.listchars:append "eol:↴"
--- vim.opt.expandtab = true
 vim.opt.termguicolors = true
 -- Set highlight on search
 vim.o.hlsearch = true

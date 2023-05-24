@@ -27,8 +27,14 @@ require('lazy').setup({
   'navarasu/onedark.nvim',
   'folke/tokyonight.nvim',
   {
+    'RRethy/vim-illuminate',
+    config = function()
+      require('myshit.plugins.illuminate');
+    end,
+  },
+  {
     'ellisonleao/gruvbox.nvim',
-    config = function ()
+    config = function()
       require('gruvbox').setup({
         transparent_mode = true,
       })
@@ -105,6 +111,17 @@ require('lazy').setup({
       }
     end,
   },
+
+  {
+    'jose-elias-alvarez/null-ls.nvim',
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require('myshit.plugins.null-ls');
+    end,
+  },
+
 
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -226,4 +243,10 @@ require('lazy').setup({
     end,
   },
 
+  {
+    'kkoomen/vim-doge',
+    config = function()
+      -- vim.cmd("call doge#install()");
+    end,
+  },
 }, {})

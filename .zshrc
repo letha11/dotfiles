@@ -70,8 +70,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-zstyle ':omz:plugins:nvm' lazy yes
 plugins=(git nvm)
+zstyle ':omz:plugins:nvm' lazy yes
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,7 +109,7 @@ alias c="clear"
 alias sz="source ~/.zshrc"
 alias v="nvim"
 alias lv="~/.local/bin/lvim"
-alias ls="lsd"
+alias ls="exa"
 alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
 
 function vconf() { 
@@ -136,14 +137,24 @@ function flutter-watch(){
   select-pane -t 0 \;
 }
 
+# NVM
+# [ "NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+# source /usr/share/nvm/nvm.sh
+# source /usr/share/nvm/bash_completion
+# source /usr/share/nvm/install-nvm-exec
+
+# Path and stuff should be on this file
+source ~/.zprofile
+
+
 export EDITOR="nvim"
 export BROWSER="firefox"
 
-export PATH=$HOME/Android/Sdk/platform-tools:$PATH
+# export PATH=$HOME/Android/Sdk/platform-tools:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/share/applications:$PATH
-export PATH=$HOME/scripts:$PATH
+# export PATH=$HOME/scripts:$PATH
 
 #
 # Flutter Stuff
@@ -153,4 +164,3 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-

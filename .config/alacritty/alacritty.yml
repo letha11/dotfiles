@@ -62,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  decorations: full
 
   # Background opacity
   #
@@ -99,7 +99,7 @@ window:
   # Override the variant of the System theme/GTK theme/Wayland client side
   # decorations. Commonly supported values are `Dark`, `Light`, and `None` for
   # auto pick-up. Set this to `None` to use the default theme variant.
-  #decorations_theme_variant: None
+  decorations_theme_variant: Dark
 
   # Resize increments
   #
@@ -135,11 +135,12 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font Mono
     # family: Roboto Mono
-    family: Hack Nerd Font
+    # family: Hack Nerd Font
     # family: JetBrains Mono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
-    # family: Hurmit Nerd Font
+    family: Hurmit Nerd Font
+    # family: Iosevka Nerd Font
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 

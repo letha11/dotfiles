@@ -1,4 +1,7 @@
 #!/bin/bash
 
+DIR=${PWD}
 stow -t ~/.config/ .config/
-stow .
+ln -s "${DIR}/.zshrc" ~/.zshrc
+
+# stow .
