@@ -57,6 +57,7 @@ wk.register({
 		w = { "<cmd>Telescope grep_string<cr>", "Search current Word" },
 		g = { "<cmd>Telescope live_grep<cr>", "Search by Grep" },
 		d = { "<cmd>Telescope diagnostics<cr>", "Search Diagnostics" },
+		k = { "<cmd>Telescope keymaps<cr>", "Search Keymaps" },
 	},
 }, { prefix = "<leader>" })
 

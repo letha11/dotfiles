@@ -1,37 +1,10 @@
-local null_ls = require("null-ls");
-
-local sources = {
-	null_ls.builtins.formatting.prettierd.with({
-		filetypes = {
-			"javascript",
-			"typescript",
-			"css",
-			"scss",
-			"html",
-			"json",
-			"yaml",
-			"markdown",
-			"graphql",
-			"md",
-			"txt",
-		},
-		args = { "--tab-width", "2" },
-	}),
-	null_ls.builtins.formatting.stylua.with({
-		filetypes = {
-			"lua",
-		},
-		args = { "--indent-width", "2", "--indent-type", "Spaces", "-" },
-	}),
-	null_ls.builtins.diagnostics.stylelint.with({
-		filetypes = {
-			"css",
-			"scss",
-		},
-	}),
-
-}
+local null_ls_status_ok, null_ls = pcall(require, "null-ls")
+if not null_ls_status_ok then
+	return
+end
 
 null_ls.setup({
-	sources = sources,
+	sources = {
+		null_ls.builtins.formatting.prettierd,
+	}
 })

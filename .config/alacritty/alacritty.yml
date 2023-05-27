@@ -134,18 +134,19 @@ font:
     # family: SauceCodePro Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font Mono
+    family: ComicShannsMono Nerd Font
     # family: Roboto Mono
     # family: Hack Nerd Font
     # family: JetBrains Mono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
-    family: Hurmit Nerd Font
+    # family: Hurmit Nerd Font
     # family: Iosevka Nerd Font
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Regular
 
 
   # Bold font face

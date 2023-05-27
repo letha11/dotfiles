@@ -9,11 +9,17 @@ local servers = {
 	-- phpactor = {},
 }
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.documentFormattingProvider = false;
+-- capabilities = require('cmp_nvim_lsp').make_capabilities(capabilities)
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
 	callback = function(ev)
+		local client = vim.lsp.get_client_by_id(ev.data.client_id);
+		if client.name == 'html' or client.name == 'tsserver' then
+			client.server_capabilities.documentFormattingProvider = false
+		end
 		-- Enable completion triggered by <c-x><c-o>
 		-- vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
