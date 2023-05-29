@@ -4,8 +4,10 @@ local wk = require('which-key')
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set('n', '<Down>', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set('n', '<Up>', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 --
 -- LSP
@@ -20,7 +22,7 @@ end, { silent = true })
 vim.keymap.set('n', '<leader>o', '<cmd>vsplit<CR>', { silent = true }) -- Vertical Split
 vim.keymap.set('n', '<leader>p', '<cmd>split<CR>', { silent = true })  -- Horizontal Split
 vim.keymap.set('n', '<C-j>', '<C-W>j', { silent = true })              -- Focus bottom window
-vim.keymap.set('n', '<C-k>', '<C-W>t', { silent = true })              -- Focus top window
+vim.keymap.set('n', '<C-k>', '<C-W>k', { silent = true })              -- Focus top window
 vim.keymap.set('n', '<C-h>', '<cmd>wincmd h<CR>', { silent = true })   -- Focus left window
 vim.keymap.set('n', '<C-l>', '<cmd>wincmd l<CR>', { silent = true })   -- Focus right window
 vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { silent = true })      -- Quit window/buffer
