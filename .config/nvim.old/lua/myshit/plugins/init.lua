@@ -17,10 +17,10 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-  -- Detect tabstop and shiftwidth automatically
+  -- Detect tabstop and shiftwidth automatically gone
   'tpope/vim-sleuth',
   'mfussenegger/nvim-dap',
-  'manzeloth/live-server',
+  -- 'manzeloth/live-server', -- the repository is gone
   'L3MON4D3/LuaSnip',
   'honza/vim-snippets',
   'rafamadriz/friendly-snippets',
@@ -217,9 +217,9 @@ require('lazy').setup({
   },
   {
     'phaazon/hop.nvim',
-    config = function()
-      require('myshit.plugins.hop')
-    end
+    -- config = function()
+    --   require('myshit.plugins.hop')
+    -- end
   },
 
   {

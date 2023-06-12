@@ -159,8 +159,8 @@ export PATH=$HOME/.local/share/applications:$PATH
 #
 # Flutter Stuff
 #
-export PATH=$HOME/fvm/default/bin:$PATH
-export PATH="$PATH":"$HOME/.pub-cache/bin"
+# export PATH=$HOME/fvm/default/bin:$PATH
+# export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

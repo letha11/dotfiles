@@ -6,6 +6,27 @@ local mason_lspconfig = require('mason-lspconfig')
 local servers = {
 	clangd = {},
 	tsserver = {},
+	html = {
+		filetypes = { 'html', 'php' },
+	},
+	emmet_ls = {
+		filetypes = {
+      'astro',
+      'css',
+      'eruby',
+      'html',
+      'htmldjango',
+      'javascriptreact',
+      'less',
+      'pug',
+      'sass',
+      'scss',
+      'svelte',
+      'typescriptreact',
+      'vue',
+			'php',
+    },
+	}
 	-- phpactor = {},
 }
 local capabilities = vim.lsp.protocol.make_client_capabilities()

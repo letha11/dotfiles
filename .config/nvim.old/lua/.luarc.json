@@ -37,6 +37,7 @@
         "/home/letha/.local/share/nvim/lazy/nvim-treesitter-textobjects/lua",
         "/home/letha/.local/share/nvim/lazy/toggleterm.nvim/lua",
         "/home/letha/dotfiles/.config/nvim/lua",
-        "${3rd}/luv/library"
+        "${3rd}/luv/library",
+        "${3rd}/luassert/library"
     ]
 }
