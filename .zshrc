@@ -111,6 +111,7 @@ alias v="nvim"
 alias lv="~/.local/bin/lvim"
 alias ls="exa"
 alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
+alias sd="cd ~ && cd \$(fd . | fzf)"
 
 function vconf() { 
 	local a=${PWD}

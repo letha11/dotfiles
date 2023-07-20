@@ -7,6 +7,10 @@
 -- })
 
 
+local opt = vim.opt
+local g = vim.g
 
+opt.relativenumber = true
+opt.cursorline = true
 
-
+opt.smartindent = false

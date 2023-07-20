@@ -9,7 +9,9 @@ local b = null_ls.builtins
 local sources = {
 
   --php
-  b.formatting.phpcsfixer.with { filetypes = { "php" } },
+  -- b.formatting.phpcsfixer.with { filetypes = { "php" } },
+  b.formatting.phpcsfixer,
+  b.diagnostics.php,
 
   -- webdev stuff
   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
@@ -20,6 +22,8 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
+
+  b.formatting.dart_format,
 }
 
 null_ls.setup {

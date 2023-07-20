@@ -2,9 +2,18 @@
 local M = {}
 
 M.general = {
-	-- n = {
-	--   ["F"] = { ":", "enter command mode", opts = { nowait = true } },
-	-- },
+	n = {
+		["<leader>o"] = { "<cmd>vsplit<CR>", "Split window Vertically", opts = { silent = true } },
+		["<leader>p"] = { "<cmd>split<CR>", "Split window Horizontally", opts = { silent = true } },
+	},
+
+	i = {
+		["jj"] = { "<Esc>", "Better escape" },
+		["jk"] = { "<Esc>", "Better escape" },
+		["<C-c>"] = { "<Esc>", "Better escape" },
+	},
+	-- vim.keymap.set('n', '<leader>o', '<cmd>vsplit<CR>', { silent = true }) -- Vertical Split
+	-- vim.keymap.set('n', '<leader>p', '<cmd>split<CR>', { silent = true })  -- Horizontal Split
 }
 
 M.nvimtree = {
@@ -66,14 +75,25 @@ M.telescope = {
 	plugin = true,
 	n = {
 		["<C-p>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
+		["<leader>da"] = {
+			"<cmd> Telescope diagnostics <CR>",
+			"See diagnostics within the project",
+		},
 	},
 }
 
 M.disabled = {
 	n = {
+    ["<tab>"] = false,
+    ["<S-tab>"] = false,
+    ["<leader>x"] = false,
 		["<C-n>"] = false,
 		["<leader>e"] = false,
 	},
+  i = {
+    -- ["<C-j>"] = false,
+    -- ["<C-k>"] = false,
+  }
 }
 -- more keybinds!
 

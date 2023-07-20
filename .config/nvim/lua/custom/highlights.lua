@@ -6,6 +6,9 @@ local M = {}
 
 ---@type Base46HLGroupsList
 M.override = {
+  -- CursorLine = {
+  --   bg = "white",
+  -- },
   Comment = {
     italic = true,
   },
