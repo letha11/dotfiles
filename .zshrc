@@ -112,6 +112,8 @@ alias lv="~/.local/bin/lvim"
 alias ls="exa"
 alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
 alias sd="cd ~ && cd \$(fd . | fzf)"
+alias figma="LD_PRELOAD=/usr/lib/libm.so.6 figma-linux &"
+alias lg="lazygit"
 
 function vconf() { 
 	local a=${PWD}

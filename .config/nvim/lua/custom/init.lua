@@ -1,16 +1,13 @@
--- local autocmd = vim.api.nvim_create_autocmd
+if vim.g.vscode then
 
--- Auto resize panes when resizing nvim window
--- autocmd("VimResized", {
---   pattern = "*",
---   command = "tabdo wincmd =",
--- })
+  vim.keymap.set('n', '<C-d>', '<C-d>zz')
+  vim.keymap.set('n', '<C-u>', '<C-u>zz')
+else
+  local opt = vim.opt
+  local g = vim.g
 
+  opt.relativenumber = true
+  opt.cursorline = true
 
-local opt = vim.opt
-local g = vim.g
-
-opt.relativenumber = true
-opt.cursorline = true
-
-opt.smartindent = false
+  opt.smartindent = false
+end
