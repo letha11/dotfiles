@@ -20,7 +20,7 @@ M.nvimtree = {
 	plugin = true,
 
 	n = {
-		["<A-1>"] = { ":NvimTreeToggle<CR>", "Toggle NvimTree" },
+		["<leader>e"] = { ":NvimTreeToggle<CR>", "Toggle NvimTree" },
 	},
 }
 
