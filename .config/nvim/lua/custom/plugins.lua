@@ -39,7 +39,8 @@ local plugins = {
 		dependencies = {
 			-- format & linting
 			{
-				"jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
+				-- "jose-elias-alvarez/null-ls.nvim",
 				config = function()
 					require("custom.configs.null-ls")
 				end,
@@ -50,6 +51,11 @@ local plugins = {
 			require("custom.configs.lspconfig")
 		end, -- Override to setup mason-lspconfig
 	},
+
+  {
+    "microsoft/python-type-stubs",
+    cond = false
+  },
 
 	-- override plugin configs
 	{
@@ -147,13 +153,13 @@ local plugins = {
         -- this overwrites the vim notify function
         vim.notify = notify.notify
     end
-  }
+  },
 
 	-- To make a plugin not be loaded
-	-- {
-	--   "NvChad/nvim-colorizer.lua",
-	--   enabled = false
-	-- },
+	{
+	  "NvChad/nvim-colorizer.lua",
+	  enabled = false
+	},
 
 	-- All NvChad plugins are lazy-loaded by default
 	-- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`

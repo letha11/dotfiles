@@ -1,4 +1,4 @@
-local cmp = require "cmp"
+local cmp = require("cmp")
 local M = {}
 
 M.telescope = {
@@ -25,7 +25,7 @@ M.treesitter = {
 		"c",
 		"markdown",
 		"markdown_inline",
-    "php",
+		"php",
 	},
 	indent = {
 		enable = false,
@@ -51,6 +51,12 @@ M.mason = {
 		-- c/cpp stuff
 		"clangd",
 		"clang-format",
+
+		-- python
+		"pyright",
+		"mypy",
+		"ruff",
+		"black", -- formatter
 	},
 }
 
@@ -71,27 +77,27 @@ M.nvimtree = {
 }
 
 M.cmp = {
-  mapping = {
-    ["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
-    ["<C-e>"] = cmp.mapping.abort(),
-    ["<CR>"] = cmp.mapping({
-       i = function(fallback)
-         if cmp.visible() and cmp.get_active_entry() then
-           cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
-         else
-           fallback()
-         end
-       end,
-       s = cmp.mapping.confirm({ select = true }),
-       c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-     }),
-    ["<Tab>"] = cmp.mapping.confirm {select = false},
-  }
+	mapping = {
+		["<C-j>"] = cmp.mapping.select_next_item(),
+		["<C-k>"] = cmp.mapping.select_prev_item(),
+		["<C-e>"] = cmp.mapping.abort(),
+		["<CR>"] = cmp.mapping({
+			i = function(fallback)
+				if cmp.visible() and cmp.get_active_entry() then
+					cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+				else
+					fallback()
+				end
+			end,
+			s = cmp.mapping.confirm({ select = true }),
+			c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+		}),
+		["<Tab>"] = cmp.mapping.confirm({ select = false }),
+	},
 }
 
-M.blankline = {
-	show_current_context_start = false, -- disable annoying highlight on function while the cursor inside the function body
-}
+-- M.blankline = {
+-- 	show_current_context_start = false, -- disable annoying highlight on function while the cursor inside the function body
+-- }
 
 return M

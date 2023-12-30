@@ -68,7 +68,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  # opacity: 0.5
+  opacity: 0.9
 
   # Startup Mode (changes require restart)
   #
@@ -135,19 +135,19 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font Mono
     # family: ComicShannsMono Nerd Font
-    family: Roboto Mono Nerd Font
+    # family: Roboto Mono Nerd Font
     # family: Hack Nerd Font
     # family: JetBrains Mono Nerd Font
     # family: FiraCode Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: Hurmit Nerd Font
-    # family: Iosevka Nerd Font
+    family: Iosevka Nerd Font
     # family: TerminessTTF Nerd Font
     # family: Mononoki Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Regular
 
 
   # Bold font face
@@ -208,11 +208,12 @@ font:
     # style: Bold Italic
 
   # Point size
-  size: 11.5
+  size: 11
 
   offset:
     x: 0
-    y: -2
+    y: 0
+    # y: -2
 
   # glyph_offset:
   #   x: 0
@@ -452,16 +453,16 @@ draw_bold_text_with_bright_colors: true
   # When set to `true`, selected text will be copied to the primary clipboard.
   #save_to_clipboard: false
 
-#cursor:
+cursor:
   # Cursor style
-  #style:
+  style:
     # Cursor shape
     #
     # Values for `shape`:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    #shape: Block
+    shape: Block
 
     # Cursor blinking state
     #
@@ -470,7 +471,7 @@ draw_bold_text_with_bright_colors: true
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    #blinking: Off
+    blinking: Off
 
   # Vi mode cursor style
   #
@@ -478,7 +479,7 @@ draw_bold_text_with_bright_colors: true
   # the style of the active value of the normal cursor.
   #
   # See `cursor.style` for available options.
-  #vi_mode_style: None
+  vi_mode_style: None
 
   # Cursor blinking interval in milliseconds.
   #blink_interval: 750
@@ -494,7 +495,7 @@ draw_bold_text_with_bright_colors: true
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
-  #thickness: 0.15
+  thickness: 0.15
 
 # Live config reload (changes require restart)
 #live_config_reload: true

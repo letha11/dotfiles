@@ -24,6 +24,11 @@ local sources = {
   b.formatting.clang_format,
 
   b.formatting.dart_format,
+
+  -- Python
+  b.diagnostics.mypy,
+  b.diagnostics.ruff,
+  b.formatting.black
 }
 
 null_ls.setup {

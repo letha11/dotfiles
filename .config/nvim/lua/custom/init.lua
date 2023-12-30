@@ -8,6 +8,7 @@ else
 
   opt.relativenumber = true
   opt.cursorline = true
+  opt.guicursor = ""
 
   opt.smartindent = false
 end

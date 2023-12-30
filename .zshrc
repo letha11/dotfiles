@@ -149,7 +149,6 @@ function flutter-watch(){
 # Path and stuff should be on this file
 source ~/.zprofile
 
-
 export EDITOR="nvim"
 export BROWSER="firefox"
 
