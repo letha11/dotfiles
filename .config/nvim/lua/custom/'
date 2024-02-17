@@ -4,19 +4,6 @@ local overrides = require("custom.configs.overrides")
 local plugins = {
 
   {
-    "JoosepAlviste/nvim-ts-context-commentstring",
-    lazy = false,
-    opts = {
-      enable_autocmd = false,
-    },
-    -- config = function()
-    --   require('ts_context_commentstring').setup {
-    --     enable_autocmd = false,
-    --   }
-    -- end
-  },
-
-  {
     "tpope/vim-surround",
     lazy = false,
   },
@@ -28,22 +15,22 @@ local plugins = {
     "mg979/vim-visual-multi", -- multi cursor
     lazy = false,
   },
-  -- {
-  --   "phaazon/hop.nvim",
-  --   lazy = false,
-  --   config = function()
-  --     require("hop").setup()
-  --   end,
-  -- },
+  {
+    "phaazon/hop.nvim",
+    lazy = false,
+    config = function()
+      require("hop").setup()
+    end,
+  },
 
-  -- {
-  --   "kkoomen/vim-doge",
-  --   -- lazy = false,
-  --   event = "VeryLazy",
-  --   config = function()
-  --     vim.cmd("call doge#install()")
-  --   end,
-  -- },
+  {
+    "kkoomen/vim-doge",
+    -- lazy = false,
+    event = "VeryLazy",
+    config = function()
+      vim.cmd("call doge#install()")
+    end,
+  },
 
   -- Override plugin definition options
 
@@ -91,7 +78,6 @@ local plugins = {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    enabled = false,
     opts = overrides.blankline,
   },
 
@@ -100,43 +86,6 @@ local plugins = {
     opts = overrides.cmp,
   },
 
-  {
-    "numToStr/Comment.nvim",
-    opts = overrides.comment,
-    config = function()
-      local prehook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook()
-      require("Comment").setup({
-        pre_hook = prehook,
-        post_hook = nil,
-      })
-    end,
-    -- lazy = false,
-  },
-
-  {
-    "L3MON4D3/LuaSnip",
-    -- follow latest release.
-    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-    -- install jsregexp (optional!).
-    -- build = "make install_jsregexp",
-    -- opts = overrides.luasnip,
-    -- config = overrides.luasnip,
-    config = function(_, opts)
-      require("plugins.configs.others").luasnip(opts)
-
-      local luasnip = require("luasnip")
-      -- luasnip.filetype_extend("javascriptreact", { "html" })
-      -- luasnip.filetype_extend("javascript", { "javascriptreact" })
-      -- luasnip.filetype_extend("javascript", { "html" })
-      -- luasnip.filetype_extend("typescript", { "javascriptreact" })
-      -- luasnip.filetype_extend("typescript", { "html" })
-      luasnip.filetype_extend("typescript", { "javascript" })
-      luasnip.filetype_extend("javascriptreact", { "html" })
-      luasnip.filetype_extend("typescriptreact", { "html" })
-
-      require("luasnip.loaders.from_vscode")
-    end,
-  },
 
   -- Install a plugin
   -- {
@@ -196,16 +145,16 @@ local plugins = {
     end,
   },
 
-  -- {
-  --   "rcarriga/nvim-notify",
-  --   config = function()
-  --     local notify = require("notify")
-  --     -- this for transparency
-  --     notify.setup({ background_colour = "#000000" })
-  --     -- this overwrites the vim notify function
-  --     vim.notify = notify.notify
-  --   end,
-  -- },
+  {
+    "rcarriga/nvim-notify",
+    config = function()
+      local notify = require("notify")
+      -- this for transparency
+      notify.setup({ background_colour = "#000000" })
+      -- this overwrites the vim notify function
+      vim.notify = notify.notify
+    end,
+  },
 
   -- To make a plugin not be loaded
   {

@@ -21,7 +21,7 @@ require("lazy").setup({
   --     s: for replacing one character, r is the adequate choice; for the rare case when one wants to continue inserting after that, using cl is more than fine
   --     S: cc is comfortable enough, and it is consistent with yy and dd
   --     gs: probably no one misses this shortcut for the :sleep command
-  "ggandor/lightspeed.nvim",
+  -- "ggandor/lightspeed.nvim",
 
   {
     "kylechui/nvim-surround",
@@ -38,7 +38,7 @@ require("lazy").setup({
 vim.opt.clipboard:append("unnamedplus")
 vim.g.mapleader = ' '
 
-vim.keymap.set('n', '<C-e>', '<CMD>call VSCodeCall("workbench.action.toggleSidebarVisibility")<CR>')
+vim.keymap.set('n', '<leader>e', '<CMD>call VSCodeCall("workbench.action.toggleSidebarVisibility")<CR>')
 print('this working or nah??')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
@@ -61,3 +61,6 @@ vim.keymap.set('n', '<leader>q', '<CMD>call VSCodeCall("workbench.action.closeAc
 -- navigating through vscode Tabs
 vim.keymap.set('n', 'L', '<CMD>call VSCodeCall("workbench.action.nextEditorInGroup")<CR>')
 vim.keymap.set('n', 'H', '<CMD>call VSCodeCall("workbench.action.previousEditorInGroup")<CR>')
+
+vim.keymap.set('i', 'jj', '<Esc>')
+vim.keymap.set('i', 'jk', '<Esc>')

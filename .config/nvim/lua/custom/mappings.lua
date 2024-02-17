@@ -8,11 +8,11 @@ M.general = {
 		["<leader>p"] = { "<cmd>split<CR>", "Split window Horizontally", opts = { silent = true } },
 	},
 
-	-- i = {
-	-- 	["jj"] = { "<Esc>", "Better escape" },
-	-- 	["jk"] = { "<Esc>", "Better escape" },
-	-- 	["<C-c>"] = { "<Esc>", "Better escape" },
-	-- },
+	i = {
+		["jj"] = { "<Esc>", "Better escape" },
+		["jk"] = { "<Esc>", "Better escape" },
+		["<C-c>"] = { "<Esc>", "Better escape" },
+	},
 	-- vim.keymap.set('n', '<leader>o', '<cmd>vsplit<CR>', { silent = true }) -- Vertical Split
 	-- vim.keymap.set('n', '<leader>p', '<cmd>split<CR>', { silent = true })  -- Horizontal Split
 }

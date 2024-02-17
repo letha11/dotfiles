@@ -5,14 +5,14 @@ local M = {}
 local highlights = require("custom.highlights")
 
 M.ui = {
-	theme = "tundra",
+	-- theme = "tundra",
 	-- theme_toggle = { "gruvbox", "one_light" },
 	-- hl_override = {
 	--   CursorLine = {
 	--     bg="white",
 	--   },
 	-- },
-	transparency = true,
+	-- transparency = true,
 
 	telescope = {
 		style = "borderless",
@@ -36,5 +36,6 @@ M.plugins = "custom.plugins"
 
 -- check core.mappings for table structure
 M.mappings = require("custom.mappings")
+
 
 return M

@@ -5,10 +5,12 @@ if vim.g.vscode then
 else
   local opt = vim.opt
   local g = vim.g
+  g.skip_ts_context_commentstring_module = true
 
   opt.relativenumber = true
-  opt.cursorline = true
-  opt.guicursor = ""
+  opt.conceallevel = 1
+  -- opt.cursorline = true
+  -- opt.guicursor = ""
 
   opt.smartindent = false
 end

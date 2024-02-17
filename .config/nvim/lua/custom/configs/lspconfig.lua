@@ -7,7 +7,7 @@ local lspconfig = require("lspconfig")
 
 -- if you just want default config for the servers then put them in a table
 -- local servers = { "html", "cssls", "tsserver", "clangd", "phpactor" }
-local servers = { "html", "cssls", "tsserver", "clangd", "pyright" }
+local servers = { "html", "cssls", "clangd", "pyright" , "tailwindcss"}
 
 for _, lsp in ipairs(servers) do
 	if lsp == "clangd" or lsp == "cssls" then
@@ -23,6 +23,10 @@ require("custom.configs.lsp")
 
 -- require('custom.configs.flutter-tools');
 
+lspconfig.tsserver.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
 lspconfig.pyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
