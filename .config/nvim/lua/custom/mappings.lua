@@ -46,7 +46,7 @@ M.lspconfig = {
 -- }
 
 M.tabufline = {
-  plugin = true,
+  plugin = false,
 	-- cycle through buffers
 	n = {
 		["<S-l>"] = {
@@ -98,5 +98,6 @@ M.disabled = {
   }
 }
 -- more keybinds!
+
 
 return M

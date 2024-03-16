@@ -5,8 +5,8 @@ local M = {}
 local highlights = require("custom.highlights")
 
 M.ui = {
-	-- theme = "tundra",
-	-- theme_toggle = { "gruvbox", "one_light" },
+	theme = "ayu_dark",
+	-- theme_toggle = { "ayu_dark", "one_light" },
 	-- hl_override = {
 	--   CursorLine = {
 	--     bg="white",
@@ -25,7 +25,7 @@ M.ui = {
 	},
 
 	tabufline = {
-		enabled = true,
+		enabled = false,
 	},
 
 	hl_override = highlights.override,

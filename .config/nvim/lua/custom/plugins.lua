@@ -36,6 +36,16 @@ local plugins = {
   --   end,
   -- },
 
+  {
+    "ThePrimeagen/harpoon",
+    lazy = false,
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require('custom.configs.harpoon-config')
+    end,
+  },
+
   -- {
   --   "kkoomen/vim-doge",
   --   -- lazy = false,
@@ -91,7 +101,6 @@ local plugins = {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    enabled = false,
     opts = overrides.blankline,
   },
 
@@ -169,32 +178,32 @@ local plugins = {
     end,
   },
 
-  {
-    "adalessa/laravel.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "tpope/vim-dotenv",
-      "MunifTanjim/nui.nvim",
-    },
-    cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
-    keys = {
-      { "<leader>la", ":Laravel artisan<cr>" },
-      { "<leader>lr", ":Laravel routes<cr>" },
-      {
-        "<leader>lt",
-        function()
-          require("laravel.tinker").send_to_tinker()
-        end,
-        mode = "v",
-        desc = "Laravel Application Routes",
-      },
-    },
-    event = { "VeryLazy" },
-    config = function()
-      require("laravel").setup()
-      require("telescope").load_extension("laravel")
-    end,
-  },
+  -- {
+  --   "adalessa/laravel.nvim",
+  --   dependencies = {
+  --     "nvim-telescope/telescope.nvim",
+  --     "tpope/vim-dotenv",
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  --   cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
+  --   keys = {
+  --     { "<leader>la", ":Laravel artisan<cr>" },
+  --     { "<leader>lr", ":Laravel routes<cr>" },
+  --     {
+  --       "<leader>lt",
+  --       function()
+  --         require("laravel.tinker").send_to_tinker()
+  --       end,
+  --       mode = "v",
+  --       desc = "Laravel Application Routes",
+  --     },
+  --   },
+  --   event = { "VeryLazy" },
+  --   config = function()
+  --     require("laravel").setup()
+  --     require("telescope").load_extension("laravel")
+  --   end,
+  -- },
 
   -- {
   --   "rcarriga/nvim-notify",
@@ -263,6 +272,7 @@ local plugins = {
 
   {
     "zbirenbaum/copilot.lua",
+    enabled = true,
     cmd = "Copilot",
     event = "InsertEnter",
     config = function()

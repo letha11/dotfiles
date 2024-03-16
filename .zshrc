@@ -110,7 +110,7 @@ alias sz="source ~/.zshrc"
 alias v="nvim"
 alias lv="~/.local/bin/lvim"
 alias ls="exa"
-alias spotify="LD_PRELOAD=/usr/lib/spotify-adblock.so spotify"
+alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
 alias sd="cd ~ && cd \$(fd . | fzf)"
 alias figma="LD_PRELOAD=/usr/lib/libm.so.6 figma-linux &"
 alias lg="lazygit"
@@ -140,6 +140,8 @@ function flutter-watch(){
   select-pane -t 0 \;
 }
 
+DISABLE_AUTO_UPDATE=true
+
 # NVM
 # [ "NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
 # source /usr/share/nvm/nvm.sh
@@ -156,6 +158,7 @@ export BROWSER="firefox"
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/share/applications:$PATH
+export PATH=$HOME/.pub-cache/bin:$PATH
 # export PATH=$HOME/scripts:$PATH
 
 #
