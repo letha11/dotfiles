@@ -70,9 +70,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm)
+plugins=(git nvm zsh-autosuggestions)
 zstyle ':omz:plugins:nvm' lazy yes
-
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,6 +113,7 @@ alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
 alias sd="cd ~ && cd \$(fd . | fzf)"
 alias figma="LD_PRELOAD=/usr/lib/libm.so.6 figma-linux &"
 alias lg="lazygit"
+alias cd="z"
 
 function vconf() { 
 	local a=${PWD}
@@ -147,6 +147,7 @@ DISABLE_AUTO_UPDATE=true
 # source /usr/share/nvm/nvm.sh
 # source /usr/share/nvm/bash_completion
 # source /usr/share/nvm/install-nvm-exec
+#source /usr/share/nvm/init-nvm.sh
 
 # Path and stuff should be on this file
 source ~/.zprofile
