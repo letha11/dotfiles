@@ -102,23 +102,23 @@ fi
 # # i3
 # #
 #
-# I3_CONFIG_PATH="$HOME/.config/i3"
-# if [[ ! -d $I3_CONFIG_PATH ]];
-# then
-#   ln -s "$DIR/.config/i3" $I3_CONFIG_PATH
-# elif [[ -d $I3_CONFIG_PATH && ! -L $I3_CONFIG_PATH ]];
-# then
-#   mv $I3_CONFIG_PATH "$I3_CONFIG_PATH.old" 
-#   ln -s "$DIR/.config/i3" $I3_CONFIG_PATH
-# fi
-#
-# I3BLOCKS_CONFIG_PATH="$HOME/.config/i3blocks"
-# if [[ ! -d $I3BLOCKS_CONFIG_PATH ]];
-# then
-#   ln -s "$DIR/.config/i3blocks" $I3BLOCKS_CONFIG_PATH
-# elif [[ -d $I3BLOCKS_CONFIG_PATH && ! -L $I3BLOCKS_CONFIG_PATH ]];
-# then
-#   mv $I3BLOCKS_CONFIG_PATH "$I3BLOCKS_CONFIG_PATH.old" 
-#   ln -s "$DIR/.config/i3blocks" $I3_CONFIG_PATH
-# fi
+I3_CONFIG_PATH="$HOME/.config/i3"
+if [[ ! -d $I3_CONFIG_PATH ]];
+then
+  ln -s "$DIR/.config/i3" $I3_CONFIG_PATH
+elif [[ -d $I3_CONFIG_PATH && ! -L $I3_CONFIG_PATH ]];
+then
+  mv $I3_CONFIG_PATH "$I3_CONFIG_PATH.old" 
+  ln -s "$DIR/.config/i3" $I3_CONFIG_PATH
+fi
+
+I3BLOCKS_CONFIG_PATH="$HOME/.config/i3blocks"
+if [[ ! -d $I3BLOCKS_CONFIG_PATH ]];
+then
+  ln -s "$DIR/.config/i3blocks" $I3BLOCKS_CONFIG_PATH
+elif [[ -d $I3BLOCKS_CONFIG_PATH && ! -L $I3BLOCKS_CONFIG_PATH ]];
+then
+  mv $I3BLOCKS_CONFIG_PATH "$I3BLOCKS_CONFIG_PATH.old" 
+  ln -s "$DIR/.config/i3blocks" $I3_CONFIG_PATH
+fi
 

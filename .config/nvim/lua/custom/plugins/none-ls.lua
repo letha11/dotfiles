@@ -9,7 +9,9 @@ return {
       null_ls.setup {
         sources = {
           null_ls.builtins.formatting.stylua,
-          null_ls.builtins.diagnostics.eslint,
+          -- null_ls.builtins.diagnostics.eslint,
+          null_ls.builtins.formatting.dart_format,
+          null_ls.builtins.formatting.black,
         },
 
         on_attach = function(client, bufnr)
@@ -19,7 +21,7 @@ return {
               group = augroup,
               buffer = bufnr,
               callback = function()
-                vim.lsp.buf.format { async = false }
+                -- vim.lsp.buf.format { async = false }
                 vim.diagnostic.enable(bufnr) -- keep diagnostic
               end,
             })
