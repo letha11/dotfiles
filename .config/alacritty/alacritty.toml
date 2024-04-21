@@ -16,8 +16,8 @@ TERM = "xterm-256color"
 size = 9
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
-style = "Medium"
+family = "MartianMono Nerd Font"
+style = "Regular"
 
 [font.offset]
 x = 0
@@ -32,9 +32,9 @@ mods = "Control"
 action = "ToggleFullscreen"
 key = "F11"
 
-[window]
-decorations = "full"
-decorations_theme_variant = "Dark"
+# [window]
+# decorations = "full"
+# decorations_theme_variant = "Dark"
 # opacity = 0.95
 
 [window.padding]
