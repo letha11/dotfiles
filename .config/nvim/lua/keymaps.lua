@@ -19,6 +19,9 @@ vim.keymap.set('i', '<C-c>', '<Esc>')
 vim.keymap.set('n', '<leader>o', ':vsplit<CR>')
 vim.keymap.set('n', '<leader>p', ':split<CR>')
 
+-- save like modern IDE
+vim.keymap.set('n', '<C-s>', ':wa<CR>')
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
