@@ -140,6 +140,12 @@ function flutter-watch(){
   select-pane -t 0 \;
 }
 
+function chpwd ()
+{
+    emulate -L zsh
+    ls -a
+}
+
 DISABLE_AUTO_UPDATE=true
 
 # NVM
