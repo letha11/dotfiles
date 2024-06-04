@@ -16,7 +16,7 @@ TERM = "xterm-256color"
 size = 9
 
 [font.normal]
-family = "Hack Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Medium"
 
 [font.offset]
