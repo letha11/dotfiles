@@ -108,7 +108,7 @@ alias c="clear"
 alias sz="source ~/.zshrc"
 alias v="nvim"
 alias lv="~/.local/bin/lvim"
-alias ls="exa"
+alias ls="eza"
 alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
 alias sd="cd ~ && cd \$(fd . | fzf)"
 alias figma="LD_PRELOAD=/usr/lib/libm.so.6 figma-linux &"
@@ -176,3 +176,4 @@ export PATH=$HOME/.pub-cache/bin:$PATH
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
