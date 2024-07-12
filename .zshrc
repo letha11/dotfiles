@@ -113,6 +113,7 @@ alias spotify="LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
 alias sd="cd ~ && cd \$(fd . | fzf)"
 alias figma="LD_PRELOAD=/usr/lib/libm.so.6 figma-linux &"
 alias lg="lazygit"
+alias cat="bat"
 alias cd="z"
 
 function vconf() { 
