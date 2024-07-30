@@ -22,6 +22,16 @@ vim.keymap.set('n', '<leader>p', ':split<CR>')
 -- save like modern IDE
 vim.keymap.set('n', '<C-s>', ':wa<CR>')
 
+-- Better Comment
+vim.keymap.set('n', '<C-_>', 'gcc', { remap = true })
+vim.keymap.set('v', '<C-_>', 'gc', { remap = true })
+
+-- Better navigation when on insert mode
+vim.keymap.set('i', '<C-h>', '<Left>')
+vim.keymap.set('i', '<C-j>', '<Down>')
+vim.keymap.set('i', '<C-k>', '<Up>')
+vim.keymap.set('i', '<C-l>', '<Right>')
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })

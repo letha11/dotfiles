@@ -151,6 +151,7 @@ DISABLE_AUTO_UPDATE=true
 
 # NVM
 # [ "NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/init-nvm.sh
 # source /usr/share/nvm/nvm.sh
 # source /usr/share/nvm/bash_completion
 # source /usr/share/nvm/install-nvm-exec
@@ -160,7 +161,7 @@ DISABLE_AUTO_UPDATE=true
 source ~/.zprofile
 
 export EDITOR="nvim"
-export BROWSER="firefox"
+export BROWSER="/usr/bin/firefox"
 
 # export PATH=$HOME/Android/Sdk/platform-tools:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH

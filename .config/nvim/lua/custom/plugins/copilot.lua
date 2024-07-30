@@ -17,11 +17,10 @@ return {
         suggestion = {
           enabled = true,
           -- use the built-in keymapping for "accept" (<M-l>)
-          auto_trigger = false,
-          accept = false, -- disable built-in keymapping
+          auto_trigger = true,
+          accept = true, -- disable built-in keymapping
         },
       }
-
 
       -- hide copilot suggestions when cmp menu is open
       -- to prevent odd behavior/garbled up suggestions

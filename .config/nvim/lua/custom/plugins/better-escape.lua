@@ -2,9 +2,9 @@ return {
   {
     'max397574/better-escape.nvim',
     opts = {
-      timeout = vim.o.timeoutlen,
-      default_mappings = true,
-      mapping = {
+      -- timeout = vim.o.timeoutlen,
+      -- default_mappings = true,
+      mappings = {
 
         -- Insert Mode
         i = {

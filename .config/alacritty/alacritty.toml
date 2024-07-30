@@ -16,12 +16,13 @@ TERM = "xterm-256color"
 size = 9
 
 [font.normal]
+family = "MesloLGM Nerd Font"
 # family = "FiraCode Nerd Font"
 style = "Medium"
 
-[font.offset]
-x = 0
-y = 0
+# [font.offset]
+# x = 0
+# y = 0
 
 [[keyboard.bindings]]
 chars = "\u0017"
@@ -32,11 +33,12 @@ mods = "Control"
 action = "ToggleFullscreen"
 key = "F11"
 
-# [window]
-# decorations = "full"
-# decorations_theme_variant = "Dark"
-# opacity = 0.95
+[window]
+decorations = "full"
+decorations_theme_variant = "Dark"
+#opacity = 0.95
 
 [window.padding]
 x = 0
 y = 0
+
