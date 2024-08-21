@@ -16,13 +16,13 @@ TERM = "xterm-256color"
 size = 9
 
 [font.normal]
-family = "MesloLGM Nerd Font"
+family = "MesloLGS NF"
 # family = "FiraCode Nerd Font"
-style = "Medium"
+style = "Regular"
 
 # [font.offset]
 # x = 0
-# y = 0
+# y = -3
 
 [[keyboard.bindings]]
 chars = "\u0017"

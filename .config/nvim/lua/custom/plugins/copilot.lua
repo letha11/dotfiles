@@ -17,8 +17,18 @@ return {
         suggestion = {
           enabled = true,
           -- use the built-in keymapping for "accept" (<M-l>)
-          auto_trigger = true,
+          -- auto_trigger = true,
           accept = true, -- disable built-in keymapping
+          hide_during_completion = true,
+          debounce = 50,
+          keymap = {
+            accept = '<M-l>',
+            accept_word = false,
+            accept_line = false,
+            next = '<M-]>',
+            prev = '<M-[>',
+            dismiss = '<C-]>',
+          },
         },
       }
 
