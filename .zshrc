@@ -151,7 +151,7 @@ DISABLE_AUTO_UPDATE=true
 
 # NVM
 # [ "NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 # source /usr/share/nvm/nvm.sh
 # source /usr/share/nvm/bash_completion
 # source /usr/share/nvm/install-nvm-exec
@@ -179,3 +179,13 @@ export PATH=$HOME/.pub-cache/bin:$PATH
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# fnm
+FNM_PATH="/home/letha/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/letha/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

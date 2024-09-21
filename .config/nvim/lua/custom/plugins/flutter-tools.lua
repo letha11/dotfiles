@@ -28,10 +28,11 @@ return {
           settings = {
             showTodos = true,
             renameFilesWithClasses = 'prompt',
+            analysisExcludedFolders = { '<path-to-flutter-sdk-packages>' },
             updateImportsOnRename = true,
             enableSnippets = true,
             completeFunctionCalls = true,
-            lineLength = 120,
+            lineLength = 80,
           },
         },
       }

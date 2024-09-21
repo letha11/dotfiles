@@ -17,10 +17,10 @@ return {
         suggestion = {
           enabled = true,
           -- use the built-in keymapping for "accept" (<M-l>)
-          -- auto_trigger = true,
-          accept = true, -- disable built-in keymapping
+          auto_trigger = true,
+          -- accept = true, -- disable built-in keymapping
           hide_during_completion = true,
-          debounce = 50,
+          debounce = 75,
           keymap = {
             accept = '<M-l>',
             accept_word = false,

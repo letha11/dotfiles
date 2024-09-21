@@ -16,7 +16,8 @@ TERM = "xterm-256color"
 size = 9
 
 [font.normal]
-family = "MesloLGS NF"
+# family = "IosevkaTerm Nerd Font"
+family = "Monofur Nerd Font"
 # family = "FiraCode Nerd Font"
 style = "Regular"
 

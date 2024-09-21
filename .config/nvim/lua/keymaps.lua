@@ -15,6 +15,9 @@ vim.keymap.set('i', '<Esc>', '<Esc>')
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
 
+vim.keymap.set('n', 'H', '^')
+vim.keymap.set('n', 'L', '$')
+
 vim.keymap.set('i', '<C-c>', '<Esc>')
 
 -- layout

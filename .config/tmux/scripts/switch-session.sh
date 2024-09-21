@@ -3,11 +3,16 @@ tmuxsessions=$(tmux list-sessions -F '#S#{?session_attached,attached,}' | grep -
 
 tmux_switch_to_session() {
   session="$1"
-  if [[ $tmuxsessions = "$session" ]]; then
-    tmux switch-client -t "$session"
-  fi
+  echo "hello"
+  echo "$tmuxsessions"
+  # if [[ $tmuxsessions = "$session" ]]; then
+    # tmux switch-client -t "$session"
+    # tmux switch-client -t "$session"
+    tmux choose-tree -t "$session"
+  # fi
 
 }
+
 choice=$(sort -fu <<< "$tmuxsessions" \
   | fzf-tmux \
     -p \
@@ -15,9 +20,10 @@ choice=$(sort -fu <<< "$tmuxsessions" \
     --info=hidden \
     --layout=reverse \
     --preview='~/.config/tmux/scripts/switch-session-preview.sh {}' \
-    --pointer='🖝 '  \
+    --pointer='>'  \
   | tr -d '\n'
 )
+    # --pointer='🖝 '  \
 
 if [[ "${choice}" != "" ]]; then
   tmux_switch_to_session "$choice"
