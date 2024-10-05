@@ -59,9 +59,9 @@ vim.opt.cursorline = true
 
 vim.opt.conceallevel = 1
 
--- vim.diagnostic.config { update_in_insert = false }
+vim.diagnostic.config { update_in_insert = true }
 
 -- Minimal number of screen lines to keep above and below the cursor.
--- vim.opt.scrolloff = 7
+vim.opt.scrolloff = 7
 
 -- vim: ts=2 sts=2 sw=2 et

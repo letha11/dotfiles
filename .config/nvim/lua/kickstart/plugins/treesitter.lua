@@ -4,7 +4,7 @@ return {
     build = ':TSUpdate',
     opts = {
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'dart' },
-      ignore_install = { 'dart' },
+      ignore_install = {},
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {

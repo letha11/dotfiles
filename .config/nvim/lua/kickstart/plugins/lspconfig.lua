@@ -149,6 +149,25 @@ return {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        -- dartls = {
+        --   cmd = { 'dart', 'language-server', '--protocol=lsp' },
+        --   filetypes = { 'dart' },
+        --   init_options = {
+        --     closingLabels = true,
+        --     flutterOutline = true,
+        --     onlyAnalyzeProjectsWithOpenFiles = false,
+        --     outline = true,
+        --     suggestFromUnimportedLibraries = true,
+        --   },
+        --   settings = {
+        --     dart = {
+        --       -- analysisExcludedFolders = ,
+        --       updateImportsOnRename = true,
+        --       completeFunctionCalls = true,
+        --       showTodos = true,
+        --     },
+        --   },
+        -- },
 
         lua_ls = {
           -- cmd = {...},
@@ -162,6 +181,28 @@ return {
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
               -- diagnostics = { disable = { 'missing-fields' } },
             },
+          },
+        },
+      }
+
+      require('lspconfig').dartls.setup {
+        capabilities = require('cmp_nvim_lsp').default_capabilities(),
+        cmd = { 'dart', 'language-server', '--protocol=lsp' },
+        filetypes = { 'dart' },
+        root_dir = require('lspconfig').util.root_pattern 'pubspec.yaml',
+        init_options = {
+          closingLabels = true,
+          flutterOutline = true,
+          onlyAnalyzeProjectsWithOpenFiles = true,
+          outline = true,
+          suggestFromUnimportedLibraries = true,
+        },
+        settings = {
+          dart = {
+            -- analysisExcludedFolders = {},
+            updateImportsOnRename = true,
+            completeFunctionCalls = true,
+            showTodos = true,
           },
         },
       }

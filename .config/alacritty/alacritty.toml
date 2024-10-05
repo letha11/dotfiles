@@ -13,11 +13,11 @@ blinking = "Off"
 TERM = "xterm-256color"
 
 [font]
-size = 9
+size = 12
 
 [font.normal]
 # family = "IosevkaTerm Nerd Font"
-family = "Monofur Nerd Font"
+family = "MesloLGS Nerd Font"
 # family = "FiraCode Nerd Font"
 style = "Regular"
 
@@ -25,18 +25,25 @@ style = "Regular"
 # x = 0
 # y = -3
 
-[[keyboard.bindings]]
-chars = "\u0017"
-key = "Back"
-mods = "Control"
+[keyboard]
+bindings = [
+	{ key = "Slash", mods = "Control", chars = "\u001f" },
+	{ key = "Back", mods = "Control", chars = "\u0017" },
+]
 
-[[keyboard.bindings]]
-action = "ToggleFullscreen"
-key = "F11"
+# [[keyboard.bindings]]
+# chars = "\u0017"
+# key = "Back"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# action = "ToggleFullscreen"
+# key = "F11"
 
 [window]
 decorations = "full"
 decorations_theme_variant = "Dark"
+option_as_alt = "Both"
 #opacity = 0.95
 
 [window.padding]

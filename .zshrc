@@ -131,6 +131,15 @@ function cc() {
 }
 #
 # I want to use $@ for all arguments but they don't contain space for me
+function flutter-watch-mac(){
+  tmux send-keys "flutter run $1 $2 $3 $4 --pid-file=/tmp/flutter.pid" Enter \;\
+  split-window -v \;\
+  send-keys 'npx -y nodemon -e dart -x "cat /tmp/flutter.pid | xargs kill -USR1"' Enter \;\
+  # send-keys 'find lib/ -name '*.dart' | \
+  #   entr -p kill -USR1 $(cat /tmp/flutter.pid)'
+  resize-pane -y 5 -t 1 \;\
+  select-pane -t 0 \;
+}
 function flutter-watch(){
   tmux send-keys "flutter run $1 $2 $3 $4 --pid-file=/tmp/flutter.pid" Enter \;\
   split-window -v \;\
@@ -181,11 +190,29 @@ eval "$(starship init zsh)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # fnm
-FNM_PATH="/home/letha/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/letha/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# FNM_PATH="/home/letha/.local/share/fnm"
+#if [ -d "$FNM_PATH" ]; then
+  #export PATH="/home/letha/.local/share/fnm:$PATH"
+  #eval "`fnm env`"
+#fi
+
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+
+
+# fnm
+# FNM_PATH="/Users/ibkaanharfatcha/Library/Application Support/fnm"
+# if [ -d "$FNM_PATH" ]; then
+#   export PATH="/Users/ibkaanharfatcha/Library/Application Support/fnm:$PATH"
+#   eval "`fnm env`"
+# fi
+#
+#
+# eval "$(fnm env --use-on-cd --shell zsh)"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/ibkaanharfatcha/.dart-cli-completion/zsh-config.zsh ]] && . /Users/ibkaanharfatcha/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

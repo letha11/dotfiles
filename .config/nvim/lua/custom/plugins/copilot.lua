@@ -17,7 +17,7 @@ return {
         suggestion = {
           enabled = true,
           -- use the built-in keymapping for "accept" (<M-l>)
-          auto_trigger = true,
+          auto_trigger = false,
           -- accept = true, -- disable built-in keymapping
           hide_during_completion = true,
           debounce = 75,
