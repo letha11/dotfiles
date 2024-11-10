@@ -71,7 +71,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git nvm zsh-autosuggestions)
-zstyle ':omz:plugins:nvm' lazy yes
+# zstyle ':omz:plugins:nvm' lazy yes
 
 source $ZSH/oh-my-zsh.sh
 
@@ -187,7 +187,7 @@ export PATH=$HOME/.pub-cache/bin:$PATH
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # fnm
 # FNM_PATH="/home/letha/.local/share/fnm"
@@ -213,6 +213,22 @@ eval "$(starship init zsh)"
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
-[[ -f /Users/ibkaanharfatcha/.dart-cli-completion/zsh-config.zsh ]] && . /Users/ibkaanharfatcha/.dart-cli-completion/zsh-config.zsh || true
+# [[ -f /Users/ibkaanharfatcha/.dart-cli-completion/zsh-config.zsh ]] && . /Users/ibkaanharfatcha/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+# export JAVA_HOME="$HOME/.jenv/shims"
+
+# fnm
+FNM_PATH="/Users/ibkaanharfatcha/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/ibkaanharfatcha/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+[[ -s "/Users/ibkaanharfatcha/.gvm/scripts/gvm" ]] && source "/Users/ibkaanharfatcha/.gvm/scripts/gvm"

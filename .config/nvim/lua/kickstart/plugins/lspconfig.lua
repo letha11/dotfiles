@@ -185,6 +185,13 @@ return {
         },
       }
 
+      local dartExcludedFolders = {
+        vim.fn.expand '$HOME/AppData/Local/Pub/Cache',
+        vim.fn.expand '$HOME/.pub-cache',
+        vim.fn.expand '/opt/homebrew/',
+        vim.fn.expand '$HOME/tools/flutter/',
+        vim.fn.expand '$HOME/fvm/default',
+      }
       require('lspconfig').dartls.setup {
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
         cmd = { 'dart', 'language-server', '--protocol=lsp' },
@@ -199,7 +206,7 @@ return {
         },
         settings = {
           dart = {
-            -- analysisExcludedFolders = {},
+            analysisExcludedFolders = dartExcludedFolders,
             updateImportsOnRename = true,
             completeFunctionCalls = true,
             showTodos = true,
